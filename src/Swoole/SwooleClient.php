@@ -285,8 +285,8 @@ class SwooleClient implements Client, ServesStaticFiles
      */
     protected function getReasonFromStatusCode(int $code): ?string
     {
-        if (array_key_exists($code, self::STATUS_CODE_REASONS)) {
-            return self::STATUS_CODE_REASONS[$code];
+        if (array_key_exists($code, self::$STATUS_CODE_REASONS)) {
+            return self::$STATUS_CODE_REASONS[$code];
         }
 
         return null;
